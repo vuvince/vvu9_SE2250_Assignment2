@@ -404,10 +404,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606892532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f7aa9d3101df45ef8ef825bdbf593c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8401358343bc64d6fb86aa09751618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 10
 --- !u!54 &1606892534
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606892532}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1b328a5c92e0540a4a4ee92e4d370658, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

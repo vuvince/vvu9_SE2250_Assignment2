@@ -5,14 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+
 	private Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
-		rb = rb.GetComponent<Rigidbody> ();
+		rb = GetComponent<Rigidbody> ();
 	}
-
-	//CHECKS BEFORE ANY PHYSICS, WHERE PHYSICS CODE GOES
+	
+	// Update is called once per frame
 	void FixedUpdate () {
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
@@ -21,6 +22,4 @@ public class PlayerController : MonoBehaviour {
 
 		rb.AddForce (movement * speed);
 	}
-
-
 }
