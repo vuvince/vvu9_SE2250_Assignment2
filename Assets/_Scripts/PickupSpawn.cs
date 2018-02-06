@@ -6,18 +6,18 @@ public class PickupSpawn : MonoBehaviour {
 
 	int numObjects = 8;
 	public GameObject prefab;
-	private GameObject Pickup;
+	private GameObject Pickup = new GameObject();
 
 	void Start() {
 		Vector3 center = transform.position;
 		Quaternion angle = new Quaternion(45, 45, 45, 0);
 
 		for (int i = 0; i < (numObjects/3); i++) {
-			int a = i * 180; 
-			Vector3 pos = Circle(center, 5.0f ,a);
+			int a = i * 180;
+			Vector3 pos = Circle (center, 5.0f, a);
 			Pickup = Instantiate (prefab, pos, angle);
 			Pickup.GetComponent<Renderer> ().material.color = Color.red;
-			Pickup.tag = "Red";
+			Pickup.tag= "Red";
 		}
 
 		for (int i = 0; i < (numObjects/3); i++) {
