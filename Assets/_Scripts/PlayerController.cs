@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	public Text countTxt;
 	public Text scoreTxt;
+	public Text win;
 	private int count;
 	private Rigidbody rb;
 
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 		countTxt.text = "Score: " + count.ToString();
 		scoreTxt.text = " ";
+		win.text = " ";
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,9 @@ public class PlayerController : MonoBehaviour {
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
 		rb.AddForce (movement * speed);
+		if (count == 20) {
+			win.text = "Win!";
+		}
 	}
 
 	void OnTriggerEnter(Collider other) {

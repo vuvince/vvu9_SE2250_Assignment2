@@ -6,7 +6,7 @@ public class PickupSpawn : MonoBehaviour {
 
 	int numObjects = 8;
 	public GameObject prefab;
-	private GameObject Pickup = new GameObject();
+	private GameObject Pickup;
 
 	void Start() {
 		Vector3 center = transform.position;
